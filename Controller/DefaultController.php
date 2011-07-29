@@ -40,6 +40,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/show/{id}")
+     * @Template()
      */
     public function showAction($id)
     {
@@ -49,16 +50,7 @@ class DefaultController extends Controller
             throw $this->createNotFoundException('Страница не найдена!');
         }
 
-        $html = <<<HTML
-        <h1>{$blog->getTitle()}</h1>
-
-        <p>{$blog->getBody()}</p>
-
-        <hr/>
-        <small>Запись создана {$blog->getCreatedDate()->format("Y-m-d H:i:s")}</small>
-HTML;
-
-        return new Response($html);
+        return array('blog' => $blog);
     }
 
 }
