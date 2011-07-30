@@ -6,9 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="blog")
+ * @ORM\Table(name="post")
  */
-class Blog {
+class Post {
 
     /**
      * @ORM\Id

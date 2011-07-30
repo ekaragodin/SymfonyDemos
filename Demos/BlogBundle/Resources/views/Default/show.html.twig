@@ -6,12 +6,12 @@
 </head>
 <body>
 
-    <h1>{{ blog.getTitle() }}</h1>
+    <h1>{{ post.getTitle() }}</h1>
 
-    <p>{{ blog.getBody() }}</p>
+    <p>{{ post.getBody() }}</p>
 
     <hr/>
-    <small>Запись создана {{ blog.getCreatedDate().format("Y-m-d H:i:s") }}</small>
+    <small>Запись создана {{ post.getCreatedDate().format("Y-m-d H:i:s") }}</small>
 
 
 </body>
